@@ -1,0 +1,1 @@
+This shared library is for developing groovy code to be used in Jenkins pipeline
