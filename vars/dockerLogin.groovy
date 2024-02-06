@@ -1,7 +1,7 @@
 //groovy script to logon to Docker Hub
 
-def call(String username, String password) {
-    // sh "docker login -u ${username} -p ${password}"
+def call() {
+    echo "Login into Docker Hub"
     withCredentials([usernamePassword(
             credentialsId: "docker",
             usernameVariable: "USER",
