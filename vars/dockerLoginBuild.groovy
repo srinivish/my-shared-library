@@ -13,5 +13,5 @@ def call(String userName, String appName, String tag) {
 //groovy script to Build the Docker Image
 // docker build -t java-app .  
     echo "Present Workspace were build is present : $env.WORKSPACE"
-    sh 'docker build -t '+ userName + '/' + appName ':' + tag +' .'
+    sh 'docker build -t '+ userName + '/' + appName + ':' + tag +' .'
 }
