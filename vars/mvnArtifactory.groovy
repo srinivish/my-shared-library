@@ -14,7 +14,6 @@ def call(String jarName, String artifactoryPublicIP) {
             usernameVariable: "USER",
             passwordVariable: "PASS"
     )]) {
-        echo "JFrog Credentials $USER and $PASS"
         sh 'curl -X PUT -u' + USER + ':' + PASS + ' -T ' + jarName +' ' +  artifactoryPublicIP
     }
 }

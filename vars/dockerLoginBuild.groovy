@@ -15,3 +15,4 @@ def call(String appName) {
     echo "Build the Docker Image : $env.WORKSPACE"
     sh 'docker build -t '+ $appName +' .'
 }
+
