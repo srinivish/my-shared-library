@@ -11,4 +11,12 @@ def call(String jarName, String artifactoryPublicIP) {
 
 // use JFrog credentials to upload jar to artifactory
 
+    withCredentials([usernamePassword(
+            credentialsId: "jfrog",
+            usernameVariable: "USER",
+            passwordVariable: "PASS"
+    )]) {
+        echo "JFrog Credentials $USER and $PASS"
+        sh 'curl -X PUT -u' + USER + ':' + PASS + ' -T ' + jarName +' ' +  artifactoryPublicIP
+    }
 }
