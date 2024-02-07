@@ -16,6 +16,7 @@ def call(String containerName, String dockerUser, String tag)
 //                 echo "created new container: $containerName with image: $params.DockerHubUser/$params.ImageName:$params.ImageTag"
 
 // check if container is running
+
 def isRunning = sh(script: "docker inspect -f '{{.State.Running}}' $containerName", returnStatus: true) == 0
 if (isRunning){
 // Container is running, stop and remove it
