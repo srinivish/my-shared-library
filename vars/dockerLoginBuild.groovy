@@ -1,5 +1,5 @@
 //groovy script to logon to Docker Hub and then Build the Docker Image
-def call(String appName) {
+def call(String userName, String appName, String tag) {
     echo "Logging into Docker Hub"
     withCredentials([usernamePassword(
             credentialsId: "docker",
@@ -13,6 +13,5 @@ def call(String appName) {
 //groovy script to Build the Docker Image
 // docker build -t java-app .  
     echo "Present Workspace were build is present : $env.WORKSPACE"
-    sh 'docker build -t '+ appName +' .'
+    sh 'docker build -t '+ userName + '/' + appName ':' + tag +' .'
 }
-
