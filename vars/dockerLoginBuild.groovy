@@ -9,9 +9,9 @@ def call(String userName, String appName, String tag) {
         sh "docker login -u '$USER' -p '$PASS'"
     }
 
-// part 2 of the script
+// part 2 of the script 
 //groovy script to Build the Docker Image
 // docker build -t java-app .  
-    echo "Present Workspace were build is present : $env.WORKSPACE"
+    echo "Build workspace location is  $env.WORKSPACE"
     sh 'docker build -t '+ userName + '/' + appName + ':' + tag +' .'
 }

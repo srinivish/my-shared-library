@@ -1,5 +1,5 @@
 // Deploy provided container in docker
-def call(String containerName, String dockerUser, String tag)
+def call(String dockerUser, String containerName, String tag)
 // user, app, tag
 {
 // Check if container is running
