@@ -1,6 +1,6 @@
 // dockerImageScan.groovy
 
-def call(String imageName, String imageTag, String userName) {
+def call(String userName, String imageName, String imageTag) {
     // sh """   
     //  trivy image ${userName}/${imageName}:${imageTag} > scan.txt
     //  cat scan.txt
