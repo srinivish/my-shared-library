@@ -16,7 +16,7 @@ echo "created new container: $containerName with image: $dockerUser/$containerNa
 // Push new image to dockerhub
 // Push docker image to dockerhub, this step is done post deploy to ensure successfull deployment of container
 //  sh 'docker push '+ $params.DockerHubUser + '/' + $params.ImageName + ':'+ $params.ImageTag + ' . '
-echo "pushing new image: $dockerUser/$containerName:$tag""
+echo "pushing new image: $dockerUser/$containerName:$tag"
 sh "docker push $dockerUser/$containerName:$tag"
-echo "pushed new image: $dockerUser/$containerName:$tag""
+echo "pushed new image: $dockerUser/$containerName:$tag"
 }
